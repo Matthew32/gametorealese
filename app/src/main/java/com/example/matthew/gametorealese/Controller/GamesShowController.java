@@ -1,6 +1,8 @@
 package com.example.matthew.gametorealese.Controller;
 
 import android.app.Activity;
+import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import com.example.matthew.gametorealese.Gestor.DBFirebase;
 import com.example.matthew.gametorealese.Model.Game;
@@ -24,4 +26,7 @@ public class GamesShowController extends Controller {
         return db.getGameData();
     }
 
+    public void setList(ListView lv, ProgressBar loading) {
+        db.getGameData(lv, loading);
+    }
 }

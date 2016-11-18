@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
                 /* Create an Intent that will start the Menu-Activity. */
                 Intent mainIntent = new Intent(ins, GameShowActivity.class);
                 ins.startActivity(mainIntent);
-                //ins.finish();
+                ins.finish();
             }
         }, SPLASH_DISPLAY_LENGTH);
 
@@ -45,6 +45,11 @@ public class MainActivity extends Activity {
 
     @Override
     protected void setResources() {
+
+    }
+
+    @Override
+    protected void setResourcesFormat() {
 
     }
 

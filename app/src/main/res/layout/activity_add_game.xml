@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Name:"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/aag_et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@android:drawable/edit_text"
+            android:hint="Put a game name here"
+            android:maxLines="1" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Description:"
+            android:textStyle="bold" />
+
+        <EditText
+
+            android:id="@+id/aag_et_description"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:background="@android:drawable/edit_text"
+            android:hint="Put a game description here" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Realese day:"
+            android:textStyle="bold" />
+
+        <EditText
+
+            android:id="@+id/aag_et_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@android:drawable/edit_text"
+            android:drawableRight="@android:drawable/ic_menu_my_calendar"
+            android:hint="Pick a Date"
+            android:maxLines="1" />
+
+        <!-- asssign material design button pls -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Upload Image:"
+            android:textStyle="bold" />
+
+        <Button
+
+            android:id="@+id/aag_btn_upimage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@android:drawable/ic_menu_upload"
+            android:gravity="center"
+            android:maxLines="1" />
+
+        <!-- asssign material design button pls -->
+
+    </LinearLayout>
+
+    <Button
+
+        android:id="@+id/aag_btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@android:drawable/ic_menu_add"
+        android:text="Save" />
+</LinearLayout>

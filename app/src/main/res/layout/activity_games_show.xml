@@ -10,8 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.matthew.gametorealese.MainActivity">
 
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true" />
+
     <ListView
+        android:id="@+id/gs_lv_games"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/gs_lv_games" />
+        android:layout_height="match_parent" />
 </RelativeLayout>

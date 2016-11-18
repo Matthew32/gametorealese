@@ -9,8 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 public abstract class Activity extends AppCompatActivity {
 
     protected abstract void setResources();
-    protected abstract void setEvents();
 
+    protected abstract void setResourcesFormat();
+
+    protected abstract void setEvents();
 
 
 }
