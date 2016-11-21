@@ -16,9 +16,13 @@ import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by matthew on 17/11/2016.
@@ -29,7 +33,7 @@ public class DBFirebase {
     private GoogleSignInOptions gso;
     private Firebase ref;
     private Context con;
-
+    private DatabaseReference mDatabase;
     public DBFirebase(Context con) {
         if (this.con == null) {
             this.con = con;
@@ -38,7 +42,28 @@ public class DBFirebase {
         }
 
     }
+    public void saveGame ( Game game) {
 
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        HashMap<String,Object> result = new HashMap<>();
+        result.put("name", game.getName());
+        result.put("description",game.getDescription());
+        result.put("photo",game.getPhoto());
+        result.put("realese_day",game.getRealeseDate());
+        // Create new post at /user-posts/$userid/$postid and at
+        // /posts/$postid simultaneously
+        String key = mDatabase.child("posts").push().getKey();
+
+
+        Map<String, Object> childUpdates = new HashMap<>();
+        //save games
+        childUpdates.put("/games/" + key, result);
+
+        mDatabase.updateChildren(childUpdates);
+
+
+    }
 
     public void signIn(String api) {
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
